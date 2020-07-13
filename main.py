@@ -70,7 +70,9 @@ def add_score():
                 print("Please enter multiplied letters in the shown format.")
                 add_score()
             print("Is word doubled or tripled?")
-            multiplier = input("Enter 2 for double and 3 for triple> ")
+            multiplier = input("Enter 2 for double and 3 for triple (Enter for neither)> ")
+            if not multiplier:
+            	multiplier = 1
             try:
                 value = temp_value = value * int(multiplier)
             except ValueError:
